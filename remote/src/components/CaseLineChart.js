@@ -52,14 +52,14 @@ export default class CaseLineChart extends React.PureComponent {
           type="monotone"
           dataKey="active"
           stroke="silver"
-          strokeWidth={!this.props.average ? 0 : 3}
+          strokeWidth={3}
           dot={false}
         />
         <Line
           type="monotone"
           dataKey="deaths"
           stroke="maroon"
-          strokeWidth={this.props.average ? 0 : 3}
+          strokeWidth={3}
           dot={false}
         />
         

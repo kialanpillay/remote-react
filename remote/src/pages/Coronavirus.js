@@ -37,7 +37,6 @@ export default class Coronavirus extends React.Component {
     
     const data = this.state.data;
     const ip = this.state.ip;
-    console.log(this.state);
 
     if (data !== null && ip !== null) {
       let country = ip.country;
