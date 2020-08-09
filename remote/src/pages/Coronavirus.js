@@ -14,7 +14,7 @@ export default class Coronavirus extends React.Component {
   }
 
   async componentDidMount() {
-    const rip = await fetch("http://ip-api.com/json/");
+    const rip = await fetch("https://ip-api.com/json/");
     const ip = await rip.json();
     const res = await fetch("https://pomber.github.io/covid19/timeseries.json");
     const data = await res.json();

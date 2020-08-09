@@ -33,7 +33,7 @@ export default class Weather extends React.Component {
 
   async componentDidMount() {
     const api = "http://api.openweathermap.org/data/2.5/";
-    const rip = await fetch(`http://ip-api.com/json/`);
+    const rip = await fetch(`https://ip-api.com/json/`);
     const ip = await rip.json();
 
     let res = await fetch(
