@@ -25,12 +25,12 @@ export default function Home() {
             <p>View detailed market data from TradingView.</p>
           </a>
 
-          <a href="/news" className="card">
+          <a href="/" className="card">
             <h3>News &rarr;</h3>
             <p>Discover top headlines from around the country.</p>
           </a>
 
-          <a href="/weather" className="card">
+          <a href="/" className="card">
             <h3>Weather &rarr;</h3>
             <p>Check your local weather conditions.</p>
           </a>
