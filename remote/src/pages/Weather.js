@@ -23,6 +23,7 @@ const direction = [
 ];
 
 export default class Weather extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -33,17 +34,17 @@ export default class Weather extends React.Component {
 
   async componentDidMount() {
     const api = "http://api.openweathermap.org/data/2.5/";
-    const rip = await fetch(`https://ip-api.com/json/`);
+    const rip = await fetch(`https://ipapi.co/json/`);
     const ip = await rip.json();
 
     let res = await fetch(
-      `${api}weather?lat=${ip.lat}&lon=${ip.lon}&appid=${process.env.OWM_KEY}&units=metric`
+      `${api}weather?lat=${ip.latitude}&lon=${ip.longitude}&appid=${process.env.OWM_KEY}&units=metric`
     );
 
     const data = await res.json();
 
     res = await fetch(
-      `${api}onecall?lat=${ip.lat}&lon=${ip.lon}&exclude=current,minutely,hourly&appid=${process.env.OWM_KEY}&units=metric`
+      `${api}onecall?lat=${ip.latitude}&lon=${ip.longitude}&exclude=current,minutely,hourly&appid=${process.env.OWM_KEY}&units=metric`
     );
     const forecast = await res.json();
 

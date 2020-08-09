@@ -14,7 +14,7 @@ export default class Coronavirus extends React.Component {
   }
 
   async componentDidMount() {
-    const rip = await fetch("https://ip-api.com/json/");
+    const rip = await fetch("https://ipapi.co/json/");
     const ip = await rip.json();
     const res = await fetch("https://pomber.github.io/covid19/timeseries.json");
     const data = await res.json();
@@ -39,7 +39,7 @@ export default class Coronavirus extends React.Component {
     const ip = this.state.ip;
 
     if (data !== null && ip !== null) {
-      let country = ip.country;
+      let country = ip.country_name;
       if (ip.country === "United States") {
         country = "US";
       }
@@ -53,7 +53,7 @@ export default class Coronavirus extends React.Component {
             </h1>
             <div className="card">
               <h1>
-                {ip.country.toUpperCase()} | {ip.countryCode}
+                {ip.country_name.toUpperCase()} | {ip.country_code}
               </h1>
               <div className="grid">
                 <div className="data">
