@@ -7,7 +7,7 @@ export default class CaseBarChart extends React.PureComponent {
       {
         name: 'Percentage',
         active: (((this.props.data.confirmed - this.props.data.recovered - this.props.data.deaths) / this.props.data.confirmed) * 100).toFixed(2),
-        recovered: ((this.props.data.recovered + this.props.data.deaths / this.props.data.confirmed) * 100).toFixed(2)
+        recovered: (((this.props.data.recovered + this.props.data.deaths) / this.props.data.confirmed) * 100).toFixed(2)
       },
     ];
     return (
